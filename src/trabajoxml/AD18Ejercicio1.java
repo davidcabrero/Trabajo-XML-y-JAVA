@@ -20,7 +20,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author anaibislopezvara
+ * @author David Cabrero
  */
 public class AD18Ejercicio1 {
 
@@ -38,7 +38,7 @@ public class AD18Ejercicio1 {
             factory.setIgnoringComments(true);           
             //Se eliminan los espacios en blanco del XML en el DocumentBuilderFactory
             factory.setIgnoringElementContentWhitespace(true);           
-            // se crea el objetyo builder donde se cargará el árbol delXML
+            // se crea el objeto builder donde se cargará el árbol delXML
             DocumentBuilder builder = factory.newDocumentBuilder();     
             File fichero = new File("empleados.xml");  
             arbolXML = builder.parse(fichero);           
@@ -62,7 +62,7 @@ public class AD18Ejercicio1 {
                 //Obtener la lista de todos los nodos hijos del nodo actual (el que apunta puntero)
                  NodeList empleados = raiz.getChildNodes();
 
-                 // animales almacena punteros a todos los nodos hijos del nodo actual
+                 // empleados almacena punteros a todos los nodos hijos del nodo actual
                  for (int i=0; i<empleados.getLength(); i++) {
                      
                      empleado=empleados.item(i); //En empleado se almacena el valor del hijo de la posición i
